@@ -87,4 +87,4 @@ JOIN Departments
 
 SELECT first_name, last_name, sex
 FROM Employee_Details
-WHERE first_name == "Hercules" AND lat_name;
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
