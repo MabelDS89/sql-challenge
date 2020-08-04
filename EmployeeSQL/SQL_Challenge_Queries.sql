@@ -50,3 +50,20 @@ CREATE TABLE Employee_Titles (
 	
 SELECT * FROM Employee_Titles;
 
+--Joining Tables
+--1. List the following details of each employee: employee number, last name, first name, sex, and salary.
+
+SELECT Salaries.emp_no, Salaries.salary, Employee_Details.first_name, Employee_Details.last_name, Employee_Details.sex
+FROM Salaries
+JOIN Employee_Details
+	ON Salaries.emp_no = Employee_Details.emp_no;
+	
+--2. List first name, last name, and hire date for employees who were hired in 1986.
+
+SELECT first_name, last_name, hire_date
+FROM Employee_Details
+WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
+
+--3. List the manager of each department with the following information: department number, department name, the manager's employee
+--number, last name, first name.
+
